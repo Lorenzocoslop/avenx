@@ -107,11 +107,11 @@ header('Expect-CT: enforce, max-age=86400, report-uri="'.$EnderecoSite.'/report-
 
 session_start();
 
-$csp = "Content-Security-Policy: default-src 'none'; object-src 'none';img-src 'self' https: data:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; connect-src 'self'; ";
+$csp = "Content-Security-Policy: default-src 'none'; object-src 'none'; img-src 'self' https: data:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; connect-src 'self' https://maps.googleapis.com https://maps.gstatic.com; ";
 $logged = isset($_SERVER['HTTP_HOST']) && isset($_SESSION[$GLOBALS['Sessao']]) && $_SESSION[$GLOBALS['Sessao']]['autorizado'];
-if($logged || isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST'] == 'localhost'){
+if ($logged || (isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST'] == 'localhost')) {
     $csp .= "script-src 'self' https: 'unsafe-inline'; style-src 'self' https: 'unsafe-inline'; font-src 'self' https:";
-}else{
+} else {
     $csp .= "script-src 'self' 'nonce-{$HashNonce}'; style-src 'self' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net https://fonts.gstatic.com";
 }
 

@@ -1,57 +1,49 @@
-<?php
-
-$telefone2 = Utils::replace('#[^0-9]#','',$Config->get('whatsapp'));
-
-
-
-if(strlen($telefone2)==10){
-
-    $whats =  Utils::Mask($telefone2,'(##) ####-####');
-
-}elseif(strlen($telefone2)==11){
-
-    $whats =  Utils::Mask($telefone2,'(##) #####-####');
-
-}
-
-
-
-?>
-
-
-
-<footer style="background-color: #e1e1e1;" class="py-5">
-
-    <div class="container py-5">
-        
-        
-        <div class="d-flex flex-column flex-lg-row align-items-center justify-content-between gap-5">
-
-            <div class="d-flex flex-column flex-md-row align-items-center justify-content-md-between gap-3 gap-md-5" style="color:#949494;">
-
-                <?php
-
-                foreach($menu as $nome => $url){
-
-                    echo '<a href="'.__PATH__.$url.'"  class="'.($request->get('module')==$url?" active":'').' nav-item nav-link">'.$nome.'</a>';
-
-                }
-
-                ?>
-
-            </div>
-
-            <div class="text-center text-md-start gap-3 d-md-flex align-items-center">
-                <div class="mb-3 mb-md-0">
-                    &copy; <?= date('Y') ?><span class="d-none d-md-inline">.</span> Todos os direitos reservados.
-                </div>
-                <a href="https://www.levsistemas.com.br" target="_blank" rel="noopener" class="mt-3 mt-md-0">
-                    <img src="https://levsistemas.com.br/addons/favicon.ico" alt="">
-                </a>
-            </div>
-
-        </div>
-
-    </div>
-
-</footer>
+<!-- start footer Area -->
+	<footer class="footer-area section_gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6  col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>Sobre nós</h6>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore
+							magna aliqua.
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-3  col-md-6 col-sm-6">
+					<div class="single-footer-widget mail-chimp">
+						<h6 class="mb-20">Instragram Feed</h6>
+						<ul class="instafeed d-flex flex-wrap">
+							<li><img src="img/i1.jpg" alt=""></li>
+							<li><img src="img/i2.jpg" alt=""></li>
+							<li><img src="img/i3.jpg" alt=""></li>
+							<li><img src="img/i4.jpg" alt=""></li>
+							<li><img src="img/i5.jpg" alt=""></li>
+							<li><img src="img/i6.jpg" alt=""></li>
+							<li><img src="img/i7.jpg" alt=""></li>
+							<li><img src="img/i8.jpg" alt=""></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>Follow Us</h6>
+						<p>Let us be social</p>
+						<div class="footer-social d-flex align-items-center">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-dribbble"></i></a>
+							<a href="#"><i class="fa fa-behance"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
+				<p class="footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</p>
+			</div>
+		</div>
+	</footer>

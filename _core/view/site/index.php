@@ -26,9 +26,16 @@
 
         <?php if(isset($view['og'])) foreach($view['og'] as $k => $v) echo '<meta property="og:'.$k.'" content="'.Utils::replace('/\s+/', ' ', $v).'" />'.PHP_EOL; ?>
         
-        <link href="<?=__PATH__?>css/framework.min.css?v=<?=filemtime($defaultPath.'css/framework.min.css')?>" rel="stylesheet">  
-        <?php if(file_exists($defaultPath.'css/style.css')){ ?>
-            <link href="<?=__PATH__?>css/style.css?v=<?=filemtime($defaultPath.'css/style.css')?>" rel="stylesheet">      
+        <link rel="stylesheet" href="<?=__PATH__?>css/bootstrap.css?v=<?=filemtime($defaultPath.'css/bootstrap.css')?>">
+        <link rel="stylesheet" href="<?=__PATH__?>css/owl.carousel.css?v=<?=filemtime($defaultPath.'css/owl.carousel.css')?>">
+        <link rel="stylesheet" href="<?=__PATH__?>css/nice-select.css?v=<?=filemtime($defaultPath.'css/nice-select.css')?>">
+        <link rel="stylesheet" href="<?=__PATH__?>css/nouislider.min.css?v=<?=filemtime($defaultPath.'css/nouislider.min.css')?>">
+        <link rel="stylesheet" href="<?=__PATH__?>css/ion.rangeSlider.css?v=<?=filemtime($defaultPath.'css/ion.rangeSlider.css')?>" />
+        <link rel="stylesheet" href="<?=__PATH__?>css/ion.rangeSlider.skinFlat.css?v=<?=filemtime($defaultPath.'css/ion.rangeSlider.skinFlat.css')?>" />
+        <link rel="stylesheet" href="<?=__PATH__?>css/magnific-popup.css?v=<?=filemtime($defaultPath.'css/magnific-popup.css')?>">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <?php if(file_exists($defaultPath.'css/site.css')){ ?>
+            <link href="<?=__PATH__?>css/site.css?v=<?=filemtime($defaultPath.'css/site.css')?>" rel="stylesheet">      
         <?php } ?>
 
         <?=str_replace('#NONCE#', $HashNonce, html_entity_decode($Config->get('head-scripts'), ENT_QUOTES, $GLOBALS['Charset']))?>  
@@ -61,8 +68,20 @@
             const __BASEPATH__ = '<?= __BASEPATH__ ?>';
         </script>
 
-        <script src="<?=__BASEPATH__?>js/framework.min.js?v=<?=filemtime($defaultPath.'js/framework.min.js')?>"></script>
-        <script src="<?=__BASEPATH__?>js/common.js?v=<?=filemtime($defaultPath.'js/common.js')?>"></script>
+        <script src="<?=__BASEPATH__?>js/vendor/jquery-2.2.4.min.js?v=<?=filemtime($defaultPath.'js/vendor/jquery-2.2.4.min.js')?>"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+        <script src="<?=__BASEPATH__?>js/vendor/bootstrap.min.js?v=<?=filemtime($defaultPath.'js/vendor/bootstrap.min.js')?>"></script>
+        <script src="<?=__BASEPATH__?>js/jquery.ajaxchimp.min.js?v=<?=filemtime($defaultPath.'js/jquery.ajaxchimp.min.js')?>"></script>
+        <script src="<?=__BASEPATH__?>js/jquery.nice-select.min.js?v=<?=filemtime($defaultPath.'js/jquery.nice-select.min.js')?>"></script>
+        <script src="<?=__BASEPATH__?>js/jquery.sticky.js?v=<?=filemtime($defaultPath.'js/jquery.sticky.js')?>"></script>
+        <script src="<?=__BASEPATH__?>js/nouislider.min.js?v=<?=filemtime($defaultPath.'js/nouislider.min.js')?>"></script>
+        <script src="<?=__BASEPATH__?>js/countdown.js?v=<?=filemtime($defaultPath.'js/countdown.js')?>"></script>
+        <script src="<?=__BASEPATH__?>js/jquery.magnific-popup.min.js?v=<?=filemtime($defaultPath.'js/jquery.magnific-popup.min.js')?>"></script>
+        <script src="<?=__BASEPATH__?>js/owl.carousel.min.js?v=<?=filemtime($defaultPath.'js/owl.carousel.min.js')?>"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+        <script src="<?=__BASEPATH__?>js/gmaps.min.js?v=<?=filemtime($defaultPath.'js/gmaps.min.js')?>"></script>
+        <script src="<?=__BASEPATH__?>js/site.js?v=<?=filemtime($defaultPath.'js/site.js')?>"></script>
 
         <?php if(isset($view['thumbs']) && count($view['thumbs']) > 0){ ?>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/blueimp-gallery/3.3.0/css/blueimp-gallery.min.css" integrity="sha512-ZpixWcgC4iZJV/pBJcyuoyD9sUsW0jRVBBTDge61Fj99r1XQNv0LtVIrCwHcy61iVTM+/1cXXtak8ywIbyvOdw==" crossorigin="anonymous" />
