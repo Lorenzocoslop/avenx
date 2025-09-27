@@ -1,0 +1,343 @@
+body { background-color: var(--lev-light)}
+
+
+
+header .navbar-nav .nav-link { 
+
+    color: var(--lev-dark) }
+
+
+
+header .navbar-nav .nav-link:hover,
+
+header .navbar-nav .nav-link:active,
+
+header .navbar-nav .nav-link:focus,
+
+header .navbar-nav .nav-link.active { color: var(--lev-secondary) }
+
+
+
+header .navbar-toggler { 
+
+    border: 0;
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    gap: .375rem;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    font-size: 100%;
+
+    padding: .75rem .5rem }
+
+  
+
+header .navbar-toggler .navbar-toggler-icon { 
+
+    width: 100%;
+
+    display: block;
+
+    height: .25rem;
+
+    border-radius: 4px;
+
+    background: var(--lev-dark) !important }
+
+  
+
+@media(max-width:991.98px){
+
+    header [class*="container"] { padding: 0 1rem  !important }
+
+  
+
+    header .navbar-collapse { 
+
+      background: var(--lev-dark);
+
+      width: 100%;
+
+      position: fixed;
+
+      z-index: 100000;
+
+      top: 0;
+
+      left: 0  }
+
+  
+
+    header .navbar-nav {
+
+      justify-content: center;
+
+      width: 100%;
+
+      height: 100vh }  
+
+  
+
+    header .navbar-nav .nav-link { 
+
+      text-align: center;
+
+      color: #FFF;
+
+      padding: .75rem 3rem !important; 
+
+      width: 100%;
+
+      font-size: 120% }
+
+  
+
+    header .navbar-nav .nav-link :hover,
+
+    header .navbar-nav .nav-link :active,
+
+    header .navbar-nav .nav-link :focus { color: var(--lev-secondary) !important }
+
+  
+
+    header .nav-item .btn { font-size: 120% }
+
+}
+
+
+
+.bg-gradient-dark {
+
+  background: rgb(14,34,39);
+
+  background: linear-gradient(180deg, rgba(14,34,39,0) 10%, rgba(14,34,39,1) 100%) }
+
+    
+
+.bg-gradient-secondary {
+
+  background: rgb(153,213,213);
+
+  background: linear-gradient(180deg, rgba(153,213,213,0) 10%, rgba(153,213,213,1) 100%) }
+
+
+
+@media (max-width: 991.98px){
+
+  .hero.ratio-18x9{
+
+    min-height: 100vh;
+
+    --lev-aspect-ratio:100%
+
+  }
+
+}
+
+
+
+.ratio-18x9 {
+
+  --lev-aspect-ratio: calc(9 / 18 * 100%);
+
+}
+
+
+
+@media (min-width: 992px){
+
+  .w-lg-50{ width: 60% !important }
+
+  .w-lg-45{ width: 45% !important }
+
+}
+
+
+
+.w-fit-content{ width: fit-content !important }
+
+
+
+.deposition-profile{
+
+  width: 75px;
+
+  height: 75px;
+
+  overflow: hidden;
+
+  border-radius: 50%;
+
+}
+
+
+
+.deposition-profile img{
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+}
+
+
+
+.case-img img{
+
+  filter: grayscale(1);
+
+  opacity: .5;
+
+  transition: all .2s ease-in-out;
+
+}
+
+
+
+.case-img:hover img{
+
+  filter: grayscale(0);
+
+  opacity: 1;
+
+  transition: all .2s ease-in-out;
+
+}
+
+
+
+.full-content{
+
+  top: 0 !important;
+
+  left: 0 !important;
+
+  bottom: 0 !important;
+
+  right: 0 !important;
+
+}
+
+
+
+.form-control.rounded-5,
+
+.form-select.rounded-5,
+
+textarea {
+
+  border: 0 !important;
+
+  padding-left: 1.5rem;
+
+  background-color: #e1e1e1;
+
+  box-shadow: inset 1px 1px 2px rgba(0,0,0,.15)
+
+}
+
+
+
+.form-control.rounded-5,
+
+.form-select.rounded-5,
+
+textarea {
+
+  border: 0 !important;
+
+  padding-left: 1.5rem;
+
+  background-color: #e1e1e1;
+
+  box-shadow: inset 1px 1px 2px rgba(0,0,0,.15)
+
+}
+
+
+
+.form-floating>label { padding-left: 1.5rem; color: #949494; }
+
+.no-image{
+  background-image: url('../img/svg/no-image.svg'), linear-gradient(to bottom, rgba(255, 0, 0, 0), var(--lev-primary));;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 10%, cover;
+}
+
+
+
+.form-floating>.form-control-plaintext~label, .form-floating>.form-control:focus~label, .form-floating>.form-control:not(:placeholder-shown)~label, .form-floating>.form-select~label {
+
+  color: #949494;
+
+  transform: scale(.85) translateY(-.5rem) translateX(.15rem);
+
+}
+
+
+
+.form-floating>.form-control-plaintext~label::after, .form-floating>.form-control:focus~label::after, .form-floating>.form-control:not(:placeholder-shown)~label::after, .form-floating>.form-select~label::after {
+
+  background-color: transparent;
+
+}
+
+.overflow-y-scroll {
+
+  overflow-y: auto
+
+}
+
+.icon{ display: inline-block;position: relative }
+.icon svg, .icon svg > *{ fill: currentColor; }
+.icon-16 svg{ width: 16px;height: 16px }
+.icon-24 svg{ width: 24px;height: 24px }
+.icon-32 svg{ width: 32px;height: 32px }
+.icon-40 svg{ width: 40px;height: 40px }
+.icon-48 svg{ width: 48px;height: 48px }
+.icon-64 svg{ width: 64px;height: 64px }
+
+.icon.text-primary {
+  fill: var(--lev-primary);
+  color: var(--lev-primary)
+}
+
+.icon.text-secondary {
+  fill: var(--lev-secondary);
+  color: var(--lev-secondary)
+}
+
+.icon.text-dark {
+  fill: var(--lev-dark);
+  color: var(--lev-dark)
+}
+
+.icon.text-white {
+  fill: #fff
+}
+
+::-webkit-scrollbar { 
+  padding: 1px;
+  background: transparent;
+  height: .5rem;
+  width: .5rem }
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb { 
+  padding: 3px }
+
+::-webkit-scrollbar-thumb { background: var(--lev-secondary) }
+::-webkit-scrollbar-thumb:hover { background: var(--lev-secondary)  }
+
+main + #about-2 { box-shadow: var(--lev-box-shadow)!important }

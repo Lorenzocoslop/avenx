@@ -1,0 +1,26 @@
+name: LEV_Producao_CI
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout do repositorio
+      uses: actions/checkout@v3
+    - name: Deploy to Server
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.REMOTE_HOST }}
+        username: ${{ secrets.REMOTE_USER }}
+        key: ${{ secrets.SERVER_SSH_KEY }}
+        port: 22000
+        script_stop: true
+        debug: true
+        script: |
+          cd public_html/dev/baseprojects/
+          git reset --hard
+          git pull origin main
+        
